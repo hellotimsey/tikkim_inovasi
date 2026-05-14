@@ -10,7 +10,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Poppins', sans-serif; background: #f0f6ff; color: #1a2744; line-height: 1.6; }
-    :root { --blue-dark: #0d1b4b; --blue: #111111; --blue-mid: #1565c0; --cyan: #00a8cc; --cyan-light: #e0f7fd; --gold: #c9a84c; --white: #ffffff; --bg: #f0f6ff; --text: #1a2744; --text-muted: #5a6e9a; --border: #d0ddf5; }
+    :root { --blue-dark: #0d1b4b; --blue: #160052; --blue-mid: #2f388a; --cyan: #00a8cc; --cyan-light: #e0f7fd; --gold: #c9a84c; --white: #ffffff; --bg: #f0f6ff; --text: #1a2744; --text-muted: #5a6e9a; --border: #d0ddf5; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -18,7 +18,7 @@
     #navbar.scrolled { background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(13,27,75,0.1); }
     .navbar-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     .nav-logo { display: flex; align-items: center; gap: 10px; }
-    .nav-logo-icon { background: var(--blue); color: white; width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .nav-logo-img { width: 60px; height: 60px; object-fit: contain; border-radius: 10px; /* Hapus jika logo tidak ingin sudut membulat */}
     .nav-logo-text { font-weight: 700; font-size: 1.1rem; color: var(--blue); }
     .nav-links { display: flex; align-items: center; gap: 32px; }
     .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text); transition: color 0.2s; position: relative; }
@@ -60,7 +60,7 @@
     }
     .hero-passport-img {
       width: 300px; max-width: 100%; border-radius: 20px;
-      box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 60px rgba(0,168,204,0.3);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 60px rgba(97, 218, 41, 0.3);
       transform: rotate(-4deg);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
@@ -212,7 +212,7 @@
     .yt-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px rgba(0,0,0,0.12); }
     .yt-thumb { height: 190px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .yt-thumb-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
-    .yt-play { width: 58px; height: 58px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #ff0000; position: absolute; transition: transform 0.25s, background 0.25s; z-index: 2; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+    .yt-play { width: 58px; height: 58px; background: rgba(255, 255, 255, 0.979); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #ff0000; position: absolute; transition: transform 0.25s, background 0.25s; z-index: 2; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
     .yt-card:hover .yt-play { transform: scale(1.15); background: white; }
     .yt-duration { position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.75); color: white; font-size: 0.73rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; z-index: 2; }
     .yt-body { padding: 14px 16px; }
@@ -231,9 +231,12 @@
 <div id="navbar">
   <div class="navbar-inner">
     <div class="nav-logo">
-      <div class="nav-logo-icon">📋</div>
+      <img src="logonav.png" alt="Logo Imigrasi Bitung" class="nav-logo-img">
       <span class="nav-logo-text">Imigrasi Bitung</span>
     </div>
+
+
+
     <nav class="nav-links">
       <a href="#home" onclick="smoothScroll(event,'home')">Home</a>
       <a href="#informasi" onclick="smoothScroll(event,'informasi')">Informasi Paspor</a>
@@ -261,10 +264,10 @@
   <div class="hero-inner">
     <div>
       <h1 class="hero-title fade-in">
-        Pelayanan Keimigrasian <span class="text-cyan">Digital</span> yang Cepat dan Mudah
+        PORTAL <span class="text-cyan">MIDO</span> BITUNG
       </h1>
       <p class="hero-desc fade-in">
-        Dapatkan informasi layanan paspor, penggantian paspor, persyaratan dokumen, dan layanan bantuan keimigrasian secara online dengan mudah.
+        Media Informasi Digital yang memuat berbagai informasi dan layanan keimigrasian melalui portal digital yang informatif, praktis, dan ramah pengguna.
       </p>
       <div class="hero-btns fade-in">
         <a class="btn btn-white btn-lg" href="#informasi" onclick="smoothScroll(event,'informasi')">Lihat Informasi</a>
@@ -281,7 +284,6 @@
 <section id="informasi">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="section-tag">Panduan Lengkap</span>
       <h2 class="section-title">Informasi Layanan Paspor</h2>
       <p class="section-desc">Temukan berbagai informasi penting terkait layanan paspor dan keimigrasian. Klik pada setiap item untuk melihat detail lengkap.</p>
     </div>
@@ -301,7 +303,7 @@
 <section id="layanan">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="section-tag">Akses Cepat</span>
+
       <h2 class="section-title">Informasi Resmi Keimigrasian</h2>
       <p class="section-desc">Akses langsung ke portal dan layanan resmi keimigrasian Indonesia.</p>
     </div>
@@ -445,13 +447,12 @@
 <section id="bantuan">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="section-tag">Bantuan Langsung</span>
-      <h2 class="section-title">Layanan Informasi & Bantuan</h2>
-      <p class="section-desc">Hubungi petugas atau lihat FAQ kami untuk mendapatkan jawaban cepat.</p>
+      <h2 class="section-title">Bantuan & Layanan Informasi</h2>
+      <p class="section-desc">Hubungi petugas kami dan pelajari hal-hal penting agar proses layanan keimigrasian berjalan lancar.</p>
     </div>
     <div class="bantuan-grid fade-in">
-      <div class="bantuan-card wa"><div class="bantuan-icon">💬</div><h3>WhatsApp Service</h3><p>Hubungi petugas kami langsung melalui WhatsApp untuk pertanyaan dan informasi layanan keimigrasian.</p><a class="btn btn-green" href="https://wa.me/628114322133" target="_blank">💬 Hubungi Petugas via WhatsApp</a></div>
-      <div class="bantuan-card bot"><div class="bantuan-icon">❓</div><h3>FAQ Cepat</h3><p>Temukan jawaban instan atas pertanyaan umum seputar layanan keimigrasian Bitung langsung dari tombol FAQ di pojok kanan bawah.</p><button class="btn btn-primary btn-lg" onclick="toggleFAQPanel()">❓ Buka FAQ Sekarang</button></div>
+      <div class="bantuan-card wa"><div class="bantuan-icon">💬</div><h3>WhatsApp Service</h3><p>Hubungi petugas kami langsung melalui WhatsApp untuk memperoleh informasi seputar layanan keimigrasian, persyaratan dokumen, prosedur permohonan, serta bantuan terkait pertanyaan atau kendala yang Anda alami.</p><a class="btn btn-green" href="https://wa.me/628114322133" target="_blank">💬 Hubungi Petugas via WhatsApp</a></div>
+      <div class="bantuan-card bot"><div class="bantuan-icon">⚠️ </div><h3>Perhatian❗</h3><p>Perhatikan informasi penting berikut agar proses layanan keimigrasian berjalan lancar. Hindari hal-hal yang dapat menyebabkan kendala atau memperlambat proses permohonan Anda.</p><button class="btn btn-primary btn-lg" onclick="toggleFAQPanel()">Buka Sekarang</button></div>
     </div>
   </div>
 </section>
@@ -469,7 +470,7 @@
         <div class="swiper-slide">
           <a class="ig-card" href="https://www.instagram.com/reel/DVPjMH_ASQF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
             <div class="ig-thumb">
-              <img src="konten1.jpg" alt="Infografis Syarat Paspor Baru">
+              <img src="assets\ig\konten1.jpg" alt="Infografis Syarat Paspor Baru">
             </div>
             <div class="ig-body">
               <div class="ig-user"><span class="ig-user-dot"></span> @imigrasi_bitung</div>
@@ -481,7 +482,7 @@
         <div class="swiper-slide">
           <a class="ig-card" href="https://www.instagram.com/reel/DTubt6IAWTn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
             <div class="ig-thumb">
-              <img src="konten2.jpg" alt="Jadwal Pelayanan Kantor Imigrasi Bitung">
+              <img src="assets\ig\konten2.jpg" alt="Jadwal Pelayanan Kantor Imigrasi Bitung">
             </div>
             <div class="ig-body">
               <div class="ig-user"><span class="ig-user-dot"></span> @imigrasi_bitung</div>
@@ -493,7 +494,7 @@
         <div class="swiper-slide">
           <a class="ig-card" href="https://www.instagram.com/reel/DXqtWmVAb_r/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
             <div class="ig-thumb">
-              <img src="konten3.jpg" alt="Syarat Lengkap Penggantian Paspor">
+              <img src="assets\ig\konten3.jpg" alt="Syarat Lengkap Penggantian Paspor">
             </div>
             <div class="ig-body">
               <div class="ig-user"><span class="ig-user-dot"></span>@imigrasi_bitung</div>
@@ -505,7 +506,7 @@
         <div class="swiper-slide">
           <a class="ig-card" href="https://www.instagram.com/p/DYEpk7JH60x/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
             <div class="ig-thumb">
-              <img src="konten4.jpg" alt="Biaya Resmi Pembuatan Paspor 2024">
+              <img src="assets\ig\konten4.jpg" alt="Biaya Resmi Pembuatan Paspor 2024">
             </div>
             <div class="ig-body">
               <div class="ig-user"><span class="ig-user-dot"></span> @imigrasi_bitung</div>
@@ -519,7 +520,7 @@ Pengambilan paspor bisa diwakilkan.
         <div class="swiper-slide">
           <a class="ig-card" href="https://www.instagram.com/p/DJv0sXfJ3qc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
             <div class="ig-thumb">
-              <img src="konten5.jpg" alt="Tutorial Cara Daftar M-Paspor">
+              <img src="assets\ig\konten5.jpg" alt="Tutorial Cara Daftar M-Paspor">
             </div>
             <div class="ig-body">
               <div class="ig-user"><span class="ig-user-dot"></span> @imigrasi_bitung</div>
@@ -553,7 +554,6 @@ Pengambilan paspor bisa diwakilkan.
 <section id="youtube">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="section-tag">Video Tutorial</span>
       <h2 class="section-title">Tutorial Layanan Keimigrasian</h2>
       <p class="section-desc">Agar masyarakat tidak perlu mencari tutorial satu per satu. Semua tersedia di sini.</p>
     </div>
@@ -565,7 +565,7 @@ Pengambilan paspor bisa diwakilkan.
         <div class="swiper-slide">
           <a class="yt-card" href="https://youtu.be/81jwxDIDDvM?si=pBwTovrMP0jz2Vep" target="_blank">
             <div class="yt-thumb">
-              <img src="thumb1.jpg" alt="Cara Daftar M-Paspor Step by Step">
+              <img src="assets\yt\thumb1.jpg" alt="Cara Daftar M-Paspor Step by Step">
               <div class="yt-play">▶</div>
               <div class="yt-duration">05:32</div>
             </div>
@@ -580,7 +580,7 @@ Pengambilan paspor bisa diwakilkan.
         <div class="swiper-slide">
           <a class="yt-card" href="https://youtu.be/YLjR_PAM1qQ?si=4XcgcaeDEOCdGLSx" target="_blank">
             <div class="yt-thumb">
-              <img src="assets/yt/video2.jpg" alt="Tutorial Pembayaran Paspor Online">
+              <img src="assets\yt\thumb2.jpg" alt="Tutorial Pembayaran Paspor Online">
               <div class="yt-play">▶</div>
               <div class="yt-duration">04:18</div>
             </div>
@@ -593,19 +593,34 @@ Pengambilan paspor bisa diwakilkan.
 
         <!-- Card 3 -->
         <div class="swiper-slide">
-          <a class="yt-card" href="https://youtu.be/GJxAy7oBWrU?si=TuN8XW5FG0PELFT1" target="_blank">
+          <a class="yt-card" href="https://youtu.be/-kIggpb1wws?si=EEJKUokS7rFiXtKb" target="_blank">
             <div class="yt-thumb">
-              <img src="assets/yt/video3.jpg" alt="Urus Paspor Pakai M-Paspor">
+              <img src="assets\yt\thumb3.jpg" alt="Urus Paspor Pakai M-Paspor">
               <div class="yt-play">▶</div>
               <div class="yt-duration">03:45</div>
+            </div>
+            <div class="yt-body">
+              <div class="yt-label">▶ Tonton di YouTube</div>
+              <div class="yt-title">Urus Paspor Kolektif Tanpa Ke Kantor Imigrasi Gampang Banget</div>
+            </div>
+          </a>
+        </div>
+
+ 
+        <!-- Card 4 -->
+        <div class="swiper-slide">
+          <a class="yt-card" href="https://youtu.be/GJxAy7oBWrU?si=oK-VJCg4P-cOJgXR" target="_blank">
+            <div class="yt-thumb">
+              <img src="assets\yt\thumb4.jpg" alt="Urus Paspor Pakai M-Paspor">
+              <div class="yt-play">▶</div>
+              <div class="yt-duration">01:03</div>
             </div>
             <div class="yt-body">
               <div class="yt-label">▶ Tonton di YouTube</div>
               <div class="yt-title">Dulu Ribet, Sekarang Gampang! Urus Paspor Pakai M-Paspor</div>
             </div>
           </a>
-        </div>
-
+        </div>        
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-next"></div>
@@ -639,45 +654,73 @@ Pengambilan paspor bisa diwakilkan.
   }
 
 
+/* ==========================================
+   ATUR UKURAN CARD YOUTUBE SECARA MANUAL
+   Ubah nilai --yt-card-width sesuai kebutuhan
+========================================== */
+
+:root {
+  --yt-card-width: 550px; /* ubah ke 650px, 700px, 800px, dst */
+  --yt-thumb-height: 350px;
+}
+
+/* Swiper */
 .yt-swiper {
-  width: 155%;
-  max-width: 155%; /* pastikan full width */
-}
-
-/* Setiap slide memiliki lebar minimum tetap */
-.yt-swiper .swiper-slide {
-  width: 620px !important;      /* ukuran card tetap besar */
-  min-width: 620px !important;  /* cegah mengecil */
-  flex-shrink: 0;               /* jangan diperkecil */
-}
-
-.yt-thumb {
-  width: 120%;
-  height: 400px; /* naikan dari 300px */
+  width: 100%;
   overflow: hidden;
-  border-radius: 0;
-  position: relative;
 }
 
-/* zoom hanya saat hover saja */
+/* Lebar card diatur manual */
+.yt-swiper .swiper-slide {
+  width: var(--yt-card-width) !important;
+  flex-shrink: 0;
+}
+
+/* Card */
+.yt-card {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dbe4ff;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Thumbnail */
+.yt-thumb {
+  width: 100%;
+  height: var(--yt-thumb-height);
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  position: relative;
+  background: #f5f7fb;
+}
+
+/* Gambar */
+.yt-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover */
 .yt-card:hover .yt-thumb img {
   transform: scale(1.06);
 }
-
-#youtube .container {
-  max-width: 100%;
-  padding: 0 16px;
-}
-
-
 /* testt*/
   footer { background: var(--blue-dark); color: rgba(255,255,255,0.85); padding: 60px 0 0; }
   .footer-center { text-align: center; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.12); }
   .footer-logo-wrap { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px; }
   .footer-logo-icon { width: 44px; height: 44px; background: var(--cyan); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+  .footer-logo-img { width: 120px; height: 120px; object-fit: contain; border-radius: 5px; /* Hapus jika tidak ingin sudut membulat */ }
   .footer-logo-text { font-weight: 800; font-size: 1.15rem; color: white; }
-  .footer-tagline { font-size: 0.85rem; opacity: 0.65; margin-bottom: 28px; }
-  .footer-social-label { font-size: 0.82rem; opacity: 0.7; margin-bottom: 16px; letter-spacing: 0.03em; }
+  .footer-tagline { font-size: 0.85rem; opacity: 0.65; margin-bottom: 28px; text-align: center;}
+  .footer-social-label { font-size: 0.82rem; opacity: 0.7; margin-bottom: 16px; letter-spacing: 0.03em; text-align: center }
   .footer-social-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
   .social-link { width: 50px; height: 50px; border-radius: 14px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.2s, background 0.2s, box-shadow 0.2s; border: 1px solid rgba(255,255,255,0.12); }
   .social-link:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
@@ -697,7 +740,7 @@ Pengambilan paspor bisa diwakilkan.
 <footer id="kontak">
   <div class="container">
     <div class="footer-center">
-      <div class="footer-logo-wrap"><div class="footer-logo-icon">📋</div><div class="footer-logo-text">Imigrasi Bitung</div></div>
+      <div class="footer-logo-wrap">  <img src="logonav.png" alt="Logo Imigrasi Bitung" class="footer-logo-img" /></div><div class="footer-logo-text">Imigrasi Bitung</div></div>
       <div class="footer-tagline">Kantor Imigrasi Kelas II Non TPI Bitung — Melayani dengan Profesional, Cepat, dan Amanah.</div>
       <div class="footer-social-label">👋 Find us on Social Media</div>
       <div class="footer-social-row">
@@ -711,126 +754,118 @@ Pengambilan paspor bisa diwakilkan.
     <div class="footer-kontak">
       <div class="footer-kontak-item"><span class="fi">📍</span><span>Jl. Sam Ratulangi No. 1, Bitung,<br/>Sulawesi Utara</span></div>
       <div class="footer-kontak-item"><span class="fi">📧</span><span>imigrasi.bitung@imigrasi.go.id</span></div>
-      <div class="footer-kontak-item"><span class="fi">📞</span><span>(0438) 21234</span></div>
+      <div class="footer-kontak-item"><span class="fi">📞</span><span>+628114322133</span></div>
       <div class="footer-kontak-item"><span class="fi">🕐</span><span>Senin–Jumat<br/>08.00 – 16.00 WITA</span></div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Kantor Imigrasi Kelas II Non TPI Bitung — Direktorat Jenderal Imigrasi, Kementerian Hukum dan HAM RI</div>
+    <div class="footer-bottom">&copy; 2026 Kantor Imigrasi Kelas II Non TPI Bitung — Direktorat Jenderal Imigrasi, Kementerian Imigrasi dan Pemasyarakatan (Kemenimipas)</div>
   </div>
 </footer>
 
 <a id="wa-float" href="https://wa.me/6281234567890" target="_blank" title="Hubungi via WhatsApp">💬</a>
-<button id="faq-btn" onclick="toggleFAQPanel()" title="FAQ — Pertanyaan Umum">❓</button>
+<button id="faq-btn" onclick="toggleFAQPanel()" title="Informasi Penting">❗</button>
 
 <div id="faq-panel">
   <div class="faq-panel-header">
-    <div class="faq-panel-header-left"><div class="faq-panel-avatar">❓</div><div><h4>FAQ Imigrasi Bitung</h4><p>Pertanyaan yang Sering Diajukan</p></div></div>
+    <div class="faq-panel-header-left"><div class="faq-panel-avatar">❗</div><div><h4>INFORMASI TAMBAHAN</h4><p></p></div></div>
     <button class="faq-close-btn" onclick="toggleFAQPanel()">✕</button>
   </div>
-<div class="faq-panel-intro">Pertanyaan yang sering diajukan.</div>
+<div class="faq-panel-intro">Perhatikan informasi penting berikut </div>
+
 
 <div class="faq-panel-body">
 
   <div class="faq-panel-item">
     <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
+      <div class="faq-panel-icon">👔</div>
+      <span class="faq-panel-trigger-text">Tata Cara Berpakaian Saat Datang ke Kantor Imigrasi</span>
+      <div class="faq-panel-chevron">▼</div>
+    </button>
+    <div class="faq-panel-answer">
+      Gunakan pakaian yang <strong>rapi, sopan, dan nyaman</strong>. Disarankan mengenakan <strong>kemeja, blus, batik</strong>, atau pakaian formal lainnya dengan warna selain <strong>putih polos</strong>, karena foto paspor menggunakan latar belakang putih. Pastikan rambut tertata rapi dan tidak menutupi wajah.
+      <br><br>
+      Hindari pakaian yang terlalu santai seperti <strong>kaos oblong, celana pendek, sandal</strong>, serta aksesori yang berlebihan.
+    </div>
+  </div>
+
+  <div class="faq-panel-item">
+    <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
       <div class="faq-panel-icon">📄</div>
-      <span class="faq-panel-trigger-text">Apa syarat untuk pengurusan paspor baru atau penggantian paspor?</span>
+      <span class="faq-panel-trigger-text">Pastikan Dokumen Lengkap dan Data Sesuai</span>
       <div class="faq-panel-chevron">▼</div>
     </button>
     <div class="faq-panel-answer">
-      Syarat pengurusan paspor adalah menyiapkan <strong>KTP Elektronik</strong>, <strong>Kartu Keluarga</strong>, serta dokumen pendukung berupa <strong>Akta Lahir / Buku Nikah / Ijazah</strong> (asli dan fotokopi).
+      Sebelum datang ke kantor imigrasi, pastikan seluruh dokumen persyaratan telah disiapkan dengan <strong>lengkap, masih berlaku, dan dalam kondisi baik</strong>. Periksa kembali agar data pada <strong>KTP, Kartu Keluarga, Akta Kelahiran, Ijazah, Buku Nikah</strong>, atau dokumen lainnya sesuai satu sama lain, terutama <strong>nama lengkap, tempat dan tanggal lahir</strong>, serta data penting lainnya.
       <br><br>
-      Untuk penggantian paspor lama keluaran tahun <strong>2009 ke atas</strong>, cukup membawa <strong>KTP Elektronik</strong> dan <strong>paspor lama</strong> (tidak berlaku untuk paspor hilang, rusak, atau keluaran KBRI).
-    </div>
-  </div>
-
-  <div class="faq-panel-item">
-    <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
-      <div class="faq-panel-icon">🆔</div>
-      <span class="faq-panel-trigger-text">Apakah dokumen persyaratan paspor bisa digantikan oleh dokumen lain?</span>
-      <div class="faq-panel-chevron">▼</div>
-    </button>
-    <div class="faq-panel-answer">
-      Apabila pemohon belum mendapatkan <strong>KTP Elektronik (KTP-El)</strong>, maka dapat digantikan dengan <strong>surat keterangan pengganti</strong> atau <strong>surat pengantar dari Disdukcapil</strong> setempat.
-    </div>
-  </div>
-
-  <div class="faq-panel-item">
-    <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
-      <div class="faq-panel-icon">⚠️</div>
-      <span class="faq-panel-trigger-text">Apa yang harus saya lakukan jika dimintakan dokumen tambahan di luar persyaratan?</span>
-      <div class="faq-panel-chevron">▼</div>
-    </button>
-    <div class="faq-panel-answer">
-      Mohon maaf atas ketidaknyamanan yang Anda alami. Penerbitan paspor tidak hanya melibatkan unsur pelayanan, namun juga unsur <strong>penegakan hukum</strong>.
-      <br><br>
-      Bila dalam proses ditemukan indikasi bahwa tujuan permohonan paspor tidak sesuai dengan yang disampaikan saat wawancara, petugas dapat meminta dokumen tambahan di luar persyaratan untuk memperkuat keterangan pemohon.
-    </div>
-  </div>
-
-  <div class="faq-panel-item">
-    <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
-      <div class="faq-panel-icon">💳</div>
-      <span class="faq-panel-trigger-text">Berapa biaya urus paspor saat ini?</span>
-      <div class="faq-panel-chevron">▼</div>
-    </button>
-    <div class="faq-panel-answer">
-      Untuk pengurusan paspor baru saat ini dikenakan biaya sebagai berikut:
-      <ul>
-        <li>Paspor biasa elektronik (e-passport) 48 halaman: <strong>Rp 650.000</strong></li>
-        <li>Paspor biasa elektronik (e-passport) 48 halaman: <strong>Rp 950.000</strong></li>
-        <li>Layanan percepatan: tambahan <strong>Rp 1.000.000</strong> (di luar biaya paspor)</li>
-      </ul>
+      Perbedaan data sekecil apa pun dapat menghambat proses verifikasi dan menyebabkan permohonan paspor tertunda.
     </div>
   </div>
 
   <div class="faq-panel-item">
     <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
       <div class="faq-panel-icon">📱</div>
-      <span class="faq-panel-trigger-text">Bagaimana prosedur untuk pengurusan paspor baru atau penggantian paspor?</span>
+      <span class="faq-panel-trigger-text">Teliti Saat Mengisi Data di Aplikasi M-Paspor</span>
       <div class="faq-panel-chevron">▼</div>
     </button>
     <div class="faq-panel-answer">
-      Pemohon dapat mengajukan permohonan paspor baru atau penggantian paspor melalui aplikasi <strong>M-Paspor</strong> yang tersedia di <strong>App Store</strong> maupun <strong>Play Store</strong>.
+      Pastikan seluruh data yang diinput di aplikasi <strong>M-Paspor</strong> sudah benar. Jika Anda pernah memiliki paspor sebelumnya, pilih opsi <strong>"Sudah Pernah Memiliki Paspor"</strong>, meskipun masa berlaku paspor lama telah habis.
+      <br><br>
+      Kesalahan dalam memilih jenis permohonan dapat menyebabkan pengajuan <strong>ditolak oleh sistem</strong>.
+    </div>
+  </div>
+
+  <div class="faq-panel-item">
+    <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
+      <div class="faq-panel-icon">⏰</div>
+      <span class="faq-panel-trigger-text">Lakukan Pembayaran Maksimal 2 Jam</span>
+      <div class="faq-panel-chevron">▼</div>
+    </button>
+    <div class="faq-panel-answer">
+      Setelah memperoleh <strong>kode billing</strong> dari aplikasi M-Paspor, pembayaran harus dilakukan paling lambat <strong>2 jam</strong> sejak kode diterbitkan.
+      <br><br>
+      Jika pembayaran tidak dilakukan dalam batas waktu tersebut, kode billing akan <strong>kedaluwarsa</strong> dan permohonan <strong>otomatis dibatalkan</strong>.
+    </div>
+  </div>
+
+  <div class="faq-panel-item">
+    <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
+      <div class="faq-panel-icon">📅</div>
+      <span class="faq-panel-trigger-text">Datang Sesuai Jadwal yang Dipilih</span>
+      <div class="faq-panel-chevron">▼</div>
+    </button>
+    <div class="faq-panel-answer">
+      Pastikan Anda hadir pada <strong>tanggal dan jam yang telah dipilih</strong> di aplikasi M-Paspor. Keterlambatan atau ketidakhadiran dapat menyebabkan Anda <strong>tidak dapat dilayani</strong> dan perlu melakukan pendaftaran ulang.
+    </div>
+  </div>
+
+  <div class="faq-panel-item">
+    <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
+      <div class="faq-panel-icon">🗣️</div>
+      <span class="faq-panel-trigger-text">Tetap Tenang Saat Wawancara</span>
+      <div class="faq-panel-chevron">▼</div>
+    </button>
+    <div class="faq-panel-answer">
+      Petugas akan mengajukan beberapa pertanyaan singkat terkait <strong>tujuan pembuatan paspor</strong> dan <strong>data pribadi</strong>. Jawablah dengan <strong>jujur, jelas, dan sesuai dokumen</strong> yang Anda miliki. Tetap tenang agar proses wawancara berjalan lancar.
     </div>
   </div>
 
   <div class="faq-panel-item">
     <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
       <div class="faq-panel-icon">👶</div>
-      <span class="faq-panel-trigger-text">Apa syarat untuk pengurusan paspor anak?</span>
+      <span class="faq-panel-trigger-text">Layanan Prioritas untuk Balita dan Lansia</span>
       <div class="faq-panel-chevron">▼</div>
     </button>
     <div class="faq-panel-answer">
-      Untuk persyaratan pengurusan paspor anak, silakan menyiapkan:
-      <ul>
-        <li>KTP Elektronik kedua orang tua</li>
-        <li>Kartu Keluarga</li>
-        <li>Akta Lahir</li>
-        <li>Buku Nikah</li>
-        <li>Paspor orang tua</li>
-      </ul>
-      Sertakan dokumen <strong>asli</strong> dan <strong>fotokopi</strong>.
-    </div>
-  </div>
-
-  <div class="faq-panel-item">
-    <button class="faq-panel-trigger" onclick="toggleFaqItem(this)">
-      <div class="faq-panel-icon">🔍</div>
-      <span class="faq-panel-trigger-text">Apa yang harus saya lakukan jika paspor saya hilang atau rusak?</span>
-      <div class="faq-panel-chevron">▼</div>
-    </button>
-    <div class="faq-panel-answer">
-      Jika paspor hilang atau rusak, pemohon dapat datang langsung ke kantor imigrasi terdekat dengan melampirkan <strong>surat kehilangan dari kepolisian</strong>.
+      Anak usia <strong>di bawah 5 tahun</strong> dan lansia <strong>di atas 60 tahun</strong> dapat memanfaatkan layanan prioritas. Pemohon dalam kategori ini <strong>tidak wajib mendaftar</strong> melalui aplikasi M-Paspor dan dapat langsung datang ke kantor imigrasi dengan membawa dokumen persyaratan asli.
+      <br><br>
+      Disarankan untuk datang pada <strong>pagi hari</strong> agar memperoleh kuota layanan prioritas.
     </div>
   </div>
 
 </div>
 
-<div class="faq-panel-footer">
-  <a class="faq-wa-btn" href="https://wa.me/628114322133" target="_blank">
-    💬 Pertanyaan lain? Hubungi via WhatsApp
-  </a>
+
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
@@ -841,9 +876,37 @@ Pengambilan paspor bisa diwakilkan.
   function toggleAcc(btn) { const item = btn.closest('.acc-item'); const isOpen = item.classList.contains('open'); document.querySelectorAll('.acc-item.open').forEach(i => i.classList.remove('open')); if (!isOpen) item.classList.add('open'); }
   function toggleFAQPanel() { document.getElementById('faq-panel').classList.toggle('open'); }
   function toggleFaqItem(btn) { const item = btn.closest('.faq-panel-item'); const isOpen = item.classList.contains('open'); document.querySelectorAll('.faq-panel-item.open').forEach(i => i.classList.remove('open')); if (!isOpen) item.classList.add('open'); }
+  
+  //  konfigurasi ig swiper
+  
   new Swiper('.ig-swiper', { slidesPerView: 1.2, spaceBetween: 16, centeredSlides: false, grabCursor: true, pagination: { el: '.ig-swiper .swiper-pagination', clickable: true }, navigation: { nextEl: '.ig-swiper .swiper-button-next', prevEl: '.ig-swiper .swiper-button-prev' }, breakpoints: { 640: { slidesPerView: 2.2, spaceBetween: 20 }, 1024: { slidesPerView: 3.2, spaceBetween: 24 } } });
-  new Swiper('.yt-swiper', { slidesPerView: 1.2, spaceBetween: 16, grabCursor: true, pagination: { el: '.yt-swiper .swiper-pagination', clickable: true }, navigation: { nextEl: '.yt-swiper .swiper-button-next', prevEl: '.yt-swiper .swiper-button-prev' }, breakpoints: { 640: { slidesPerView: 2.2, spaceBetween: 20 }, 1024: { slidesPerView: 3.2, spaceBetween: 24 } } });
-  const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+
+
+  //  konfigurasi yt-swiper 
+new Swiper('.yt-swiper', {
+  slidesPerView: 'auto',   // membaca width dari CSS
+  spaceBetween: 24,
+  grabCursor: true,
+  loop: false,
+  centeredSlides: false,
+
+  pagination: {
+    el: '.yt-swiper .swiper-pagination',
+    clickable: true
+  },
+
+  navigation: {
+    nextEl: '.yt-swiper .swiper-button-next',
+    prevEl: '.yt-swiper .swiper-button-prev'
+  },
+
+  // memastikan semua slide tetap terdeteksi
+  watchOverflow: false,
+  observer: true,
+  observeParents: true
+});  
+
+const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
